@@ -39,10 +39,11 @@ OnCodeEditor is an online code editor that lets you write and run code in multip
 
 2. Open one of the editor folders and launch the `index.html` file in your browser:
 
-- `HTMLCSSJS Editor/index.html`
-- `Javascript Editor/index.html`
-- `Python Editor/index.html`
-- `SQL Editor/index.html`
+- `Landing_Page/index.html`
+- `HTMLCSSJS_Code_Editor/index.html`
+- `Javascript_Code_Editor/index.html`
+- `Python_Code_Editor/index.html`
+- `SQL_Code_Editor/index.html`
 
 ---
 
