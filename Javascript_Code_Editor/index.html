@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>OnCodeEditor | JS Interpreter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <a href="/Landing_Page/index.html" class="logo" style="text-decoration: none; color: inherit;">
+        <img src="/Attachments/logo.png" alt="TryCode Logo" class="logo-img">
+        <span>OnCodeEditor</span>
+    </a>
+    <div class="controls">
+      <div class="lang-buttons">
+        <button onclick="switchToHtmlcssjs()">
+          <img src="/Attachments/htmlcssjs.png" class="icon-img" alt="HTML">
+          HTML/CSS/JS
+        </button>
+        <button onclick="switchToPython()">
+          <img src="/Attachments/python.png" class="icon-img" alt="Python">
+          Python
+        </button>
+        <button onclick="alert('You are already in JavaScript Interpreter!')" class="active-lang">
+          <img src="/Attachments/javascript.png" class="icon-img" alt="JavaScript">
+          JavaScript
+        </button>
+        <button onclick="switchToSql()">
+          <img src="/Attachments/sql.png" class="icon-img" alt="SQL">
+          SQL
+        </button>
+      </div>
+      <div class="toggle-icon" id="darkModeToggle" title="Toggle Dark/Light Mode">
+        <img src="/Attachments/sun.png" class="toggle-icon-img" id="themeIcon" alt="Theme Toggle">
+      </div>
+    </div>
+  </header>
+
+  <div class="main-container">
+    <div class="container">
+      <!-- Code Panel -->
+      <div class="panel" id="codePanel">
+        <div class="top-bar">
+          <div class="file-label">
+            <img src="/Attachments/file.png" class="icon-img" alt="File">
+            script.js
+          </div>
+          <div class="button-group">
+            <button class="run" onclick="runCode()" title="Run Code (Ctrl+Enter)">
+              <img src="/Attachments/run.png" class="icon-img" alt="Run" style="margin-right: 4px;">
+              Run
+            </button>
+            <button class="copy" onclick="copyCode()" title="Copy Code">
+              <img src="/Attachments/copy.png" class="icon-img" alt="Copy" style="margin-right: 4px;">
+              Copy
+            </button>
+          </div>
+        </div>
+        <div class="editor-container">
+          <div class="line-numbers" id="lineNumbers">1</div>
+          <textarea id="code" class="editor" spellcheck="false" placeholder="// Write your JavaScript code here...
+// Example:
+console.log('Hello, World!');
+
+// You can use any JavaScript features supported by your browser
+function factorial(n) {
+  return n <= 1 ? 1 : n * factorial(n - 1);
+}
+console.log('5! =', factorial(5));"></textarea>
+        </div>
+      </div>
+
+      <!-- Resizer Divider -->
+      <div class="resizer" id="dragbar"></div>
+
+      <!-- Output Panel -->
+      <div class="output-panel" id="outputPanel">
+        <div class="top-bar">
+          <div class="file-label">
+            <img src="/Attachments/output.png" class="icon-img" alt="Output">
+            Output
+          </div>
+          <div class="button-group">
+            <button class="clear" onclick="clearOutput()" title="Clear Output">
+              <img src="/Attachments/clear.png" class="icon-img" alt="Clear" style="margin-right: 4px;">
+              Clear
+            </button>
+          </div>
+        </div>
+        <div id="output" class="output-area">&gt;</div>
+      </div>
+    </div>
+
+    <div class="status-bar">
+      <div class="status-left">
+        <div class="status-item">
+          <span>Lines: </span>
+          <span id="lineCount">1</span>
+        </div>
+        <div class="status-item">
+          <span>Characters: </span>
+          <span id="charCount">0</span>
+        </div>
+      </div>
+      <div class="status-right">
+        <div class="status-item">
+          ✓ JavaScript Ready
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>OnCodeEditor | SQL</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/sql-wasm.js"></script>
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <a href="/Landing_Page/index.html" class="logo" style="text-decoration: none; color: inherit;">
+        <img src="/Attachments/logo.png" alt="TryCode Logo" class="logo-img">
+        <span>OnCodeEditor</span>
+    </a>
+    <div class="controls">
+      <div class="lang-buttons">
+        <button onclick="switchToHtmlcssjs()">
+          <img src="/Attachments/htmlcssjs.png" class="icon-img" alt="HTML">
+          HTML/CSS/JS
+        </button>
+        <button onclick="switchToPython()">
+          <img src="/Attachments/python.png" class="icon-img" alt="Python">
+          Python
+        </button>
+        <button onclick="switchToJS()">
+          <img src="/Attachments/javascript.png" class="icon-img" alt="JavaScript">
+          JavaScript
+        </button>
+        <button onclick="alert('You are already in SQL Interpreter!')" class="active-lang">
+          <img src="/Attachments/sql.png" class="icon-img" alt="SQL">
+          SQL
+        </button>
+      </div>
+      <div class="toggle-icon" id="darkModeToggle" title="Toggle Dark/Light Mode">
+        <img src="/Attachments/sun.png" class="toggle-icon-img" id="themeIcon" alt="Theme Toggle">
+      </div>
+    </div>
+  </header>
+
+  <div class="main-container">
+    <div class="container">
+      <!-- Code Panel -->
+      <div class="panel" id="codePanel">
+        <div class="top-bar">
+          <div class="file-label">
+            <img src="/Attachments/file.png" class="icon-img" alt="File">
+            query.sql
+          </div>
+          <div class="button-group">
+            <button class="run" onclick="runSQL()" title="Run Query (Ctrl+Enter)">
+              <img src="/Attachments/run.png" class="icon-img" alt="Run" style="margin-right: 4px;">
+              Run
+            </button>
+            <button class="copy" onclick="copyCode()" title="Copy Code">
+              <img src="/Attachments/copy.png" class="icon-img" alt="Copy" style="margin-right: 4px;">
+              Copy
+            </button>
+          </div>
+        </div>
+        <div class="editor-container">
+          <div class="line-numbers" id="lineNumbers">1</div>
+          <textarea id="code" class="editor" spellcheck="false" placeholder="-- Write your SQL queries here...
+-- Example: SELECT * FROM employees;
+-- Multiple statements are supported
+
+CREATE TABLE users (
+  id INTEGER PRIMARY KEY,
+  name TEXT NOT NULL,
+  email TEXT UNIQUE NOT NULL
+);"></textarea>
+        </div>
+      </div>
+
+      <!-- Resizer Divider -->
+      <div class="resizer" id="dragbar"></div>
+
+      <!-- Output Panel -->
+      <div class="output-panel" id="outputPanel">
+        <div class="top-bar">
+          <div class="file-label">
+            <img src="/Attachments/output.png" class="icon-img" alt="Output">
+            Results
+          </div>
+          <div class="button-group">
+            <button class="clear" onclick="clearOutput()" title="Clear Output">
+              <img src="/Attachments/clear.png" class="icon-img" alt="Clear" style="margin-right: 4px;">
+              Clear
+            </button>
+            <button class="run" onclick="initSampleDatabase()" title="Load Sample Database">
+              <img src="/Attachments/sample db.png" class="icon-img" alt="Sample DB" style="margin-right: 4px;">
+              Sample DB
+            </button>
+          </div>
+        </div>
+        <div id="output" class="output-area">Loading SQL engine...<div class="spinner"></div></div>
+      </div>
+    </div>
+
+    <div class="status-bar">
+      <div class="status-left">
+        <div class="status-item">
+          <span>Lines: </span>
+          <span id="lineCount">1</span>
+        </div>
+        <div class="status-item">
+          <span>Characters: </span>
+          <span id="charCount">0</span>
+        </div>
+      </div>
+      <div class="status-right">
+        <div class="status-item" id="sqlStatus">
+          <div class="spinner"></div>
+          Loading SQL...
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

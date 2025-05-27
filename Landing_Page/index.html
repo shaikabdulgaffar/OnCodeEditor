@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TryCodeEditor - Multi-Language Online Code Editor</title>
+    <meta name="description" content="Online code editor that lets you write, run, and share code in multiple programming languages directly from your browser">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="/Landing_Page/index.html" class="logo" style="text-decoration: none; color: inherit;">
+                    <img src="/Attachments/logo.png" alt="TryCode Logo" class="logo-img">
+                    <span>OnCodeEditor</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#languages">Languages</a></li>
+                    <li><a href="#preview">Preview</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <a href="#languages" class="btn-Trycode btn-Trycode-primary">Try Now</a>
+                <div style="display: flex; align-items: center;">
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="toggle-icon" id="themeToggle" title="Toggle Dark/Light Mode">
+                        <i class="fas fa-sun" id="themeIcon"></i>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h1>Code Anywhere, Anytime</h1>
+                <p>TryCodeEditor is a powerful online code editor that lets you write, run, and share code in multiple programming languages directly from your browser. No setup required!</p>
+                <div class="hero-buttons">
+                    <a href="#languages" class="btn btn-primary">Start Coding Now</a>
+                    <a href="#features" class="btn btn-secondary">Explore Features</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Powerful Features</h2>
+                <p>Everything you need to code efficiently in one place</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Real-time Execution</h3>
+                    <p>See your code results instantly as you type, with no need to refresh or recompile. Our advanced execution engine provides immediate feedback.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3>Multi-Language Support</h3>
+                    <p>Write in HTML, CSS, JavaScript, Python, and SQL - all in one powerful editor with syntax highlighting and intelligent code completion.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-moon"></i>
+                    </div>
+                    <h3>Dark/Light Mode</h3>
+                    <p>Switch between dark and light themes to match your preference or environment. Easy on the eyes during long coding sessions.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                    <h3>Resizable Panels</h3>
+                    <p>Customize your workspace by resizing editor and output panels to your liking. Perfect for any screen size or coding style.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Sample Databases</h3>
+                    <p>Practice SQL with pre-loaded sample databases ready for querying. Perfect for learning database concepts and testing queries.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Code Analytics</h3>
+                    <p>Track your coding progress with detailed analytics including line counts, execution times, and performance metrics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Languages Section -->
+    <section class="languages" id="languages">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Supported Languages</h2>
+                <p>Write, run, and debug code in multiple programming languages</p>
+            </div>
+            <div class="languages-grid">
+                <div class="language-card fade-in">
+                    <div class="language-icon html-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3>HTML/CSS/JS</h3>
+                    <p>Build interactive web pages with live preview and instant feedback</p>
+                    <a href="/HTMLCSSJS_Code_Editor/index.html" class="language-try-btn" data-lang="html">Try HTML Editor</a>
+                </div>
+                <div class="language-card fade-in">
+                    <div class="language-icon python-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3>Python</h3>
+                    <p>Run Python code directly in your browser with full library support</p>
+                    <a href="/Python_Code_Editor/index.html" class="language-try-btn" data-lang="python">Try Python Editor</a>
+                </div>
+                <div class="language-card fade-in">
+                    <div class="language-icon js-icon">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <h3>JavaScript</h3>
+                    <p>Add interactivity and dynamic behavior to your web projects</p>
+                    <a href="/Javascript_Code_Editor/index.html" class="language-try-btn" data-lang="javascript">Try JS Editor</a>
+                </div>
+                <div class="language-card fade-in">
+                    <div class="language-icon sql-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>SQL</h3>
+                    <p>Query databases with sample data and learn SQL concepts</p>
+                    <a href="/SQL_Code_Editor/index.html" class="language-try-btn" data-lang="sql">Try SQL Editor</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Editor Preview Section -->
+    <section class="editor-preview" id="preview">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Editor Preview</h2>
+                <p>Experience our Python editor with real code execution</p>
+            </div>
+            <div class="editor-screenshot">
+                <img src="/Attachments/python-editor.png" alt="OnCodeEditor Python Interface" class="editor-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content fade-in">
+                <h2>Ready to Start Coding?</h2>
+                <p>Join thousands of developers who use TryCodeEditor to learn, practice, and share their code. Start your coding journey today!</p>
+                <a href="#languages" class="btn btn-white">Get Started for Free</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>TryCodeEditor</h3>
+                    <p>The online code editor that makes learning and practicing programming languages easy and accessible to everyone, anywhere in the world.</p>
+                    <div class="social-links">
+                        <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#languages">Languages</a></li>
+                        <li><a href="#preview">Preview</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Code Editors</h3>
+                    <ul class="footer-links">
+                        <li><a href="/HTMLCSSJS_Code_Editor/index.html">HTML/CSS/JS Editor</a></li>
+                        <li><a href="/Javascript_Code_Editor/index.html">JavaScript Editor</a></li>
+                        <li><a href="/Python_Code_Editor/index.html">Python Editor</a></li>
+                        <li><a href="/SQL_Code_Editor/index.html">SQL Editor</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="mailto:hello@trycodeeditor.com">Email Support</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">GitHub Issues</a></li>
+                        <li><a href="#">Contribute</a></li>
+                        <li><a href="#">Report Bug</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TryCodeEditor. All rights reserved. Made with ❤️ for developers worldwide.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
